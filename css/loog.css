@@ -1,0 +1,779 @@
+:root {
+    --maincolor: rgb(255, 230, 0);
+    --padding-top: 100px;
+    --padding-bottom: 100px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    transition: 2s 2s;
+}
+
+
+
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small */
+@media (min-width :780px) {
+    .container {
+        width: 750px;
+    }
+
+}
+
+/* medium */
+@media (min-width :992px) {
+    .container {
+        width: 970px;
+    }
+
+}
+
+/* large */
+@media (min-width :1200px) {
+    .container {
+        width: 1170px;
+    }
+
+}
+
+/* start header */
+header {
+    background-color: #1b1b1b;
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+}
+
+header .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+header .container div {
+    height: 4px;
+    width: 45px;
+    background-color: var(--maincolor);
+    border-radius: 2px;
+    position: relative;
+    transition: 0.3s;
+}
+
+header .container div:hover {
+    overflow: visible;
+}
+
+header .container div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    background-color: var(--maincolor);
+}
+
+header .container div::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    background-color: var(--maincolor);
+}
+
+
+
+/* end header */
+/* start home */
+.home {
+    background-image: url("https://ivkovic.me/themes/Sparkle/images/hero.png");
+    background-size: cover;
+    text-align: center;
+
+}
+
+.home .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 160px;
+}
+
+.home .container h1 {
+    margin-bottom: 50px;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 15px;
+
+}
+
+.home .container h5 {
+    margin-bottom: 60px;
+    letter-spacing: 7px;
+    font-weight: lighter;
+}
+
+.home .container a {
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 1px solid var(--maincolor);
+    color: black;
+    background-color: var(--maincolor);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.home .container a:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* end home */
+/* start second */
+.second {
+    padding-top: var(--padding-top);
+    padding-bottom: 150px;
+}
+
+.second .container {
+    text-align: center;
+}
+
+.second .container .box {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.second .container img {
+    margin-bottom: 100px;
+}
+
+.second .container p {
+    line-height: 1.8;
+    letter-spacing: 1px;
+    color: rgb(158, 156, 159);
+}
+
+/* end second */
+/* start three */
+.three {
+    padding-top: var(--padding-top);
+    padding-bottom: 30px;
+    background-color: #e7e3e3dc;
+}
+
+.three .container {
+    text-align: center;
+}
+
+
+.three .container .h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    letter-spacing: 15px;
+}
+
+.three .container .p {
+    color: rgb(178, 178, 178);
+    margin-bottom: 100px;
+    text-align: center;
+    text-indent: 90px;
+    line-height: 1.8;
+}
+
+
+.three .container .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.three .container .box .child {
+    background-color: white;
+    box-shadow: 0px 0px 15px 0px rgb(27 27 27 / 10%);
+}
+
+.three .container .box .child img {
+    margin-top: 40px;
+}
+
+.three .container .box .child p:nth-of-type(1) {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.three .container .box .child p:nth-of-type(2) {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+    color: #1B1B1B;
+    letter-spacing: 0.025em;
+    font-size: 0.8rem;
+    line-height: 1.7rem;
+}
+
+.three .container .box-two {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: start;
+}
+
+.three .container .box-two .child {
+    background-color: white;
+}
+
+.three .container .box-two .child .d {
+    padding: 0 10px;
+}
+
+.three .container .box-two .child .d h6 {
+    padding: 10px 0;
+}
+
+.three .container .box-two .child .d div {
+
+    height: 6px;
+    border-radius: 10px;
+    width: calc(100% - 10px);
+    position: relative;
+    background-color: #e7e3e3dc;
+}
+
+.three .container .box-two .child .d span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 230, 0);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.three .container .box-two .child .y {
+    margin-bottom: 10px;
+}
+
+/* end three */
+/* start four */
+.four {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: black;
+
+}
+
+.four .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.four .container .box {
+    background-color: white;
+    color: black;
+}
+
+.four .container .box p:nth-of-type(1) {
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 14px;
+}
+
+.four .container .box p:nth-of-type(2) {
+    color: #8d8d8d;
+    margin-bottom: 10px;
+}
+
+/* end four */
+/* start five */
+.five {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+
+}
+
+.five .container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.five .container .h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    letter-spacing: 15px;
+}
+
+.five .container .p {
+    color: rgb(178, 178, 178);
+    margin-bottom: 100px;
+    text-align: center;
+    text-indent: 90px;
+    line-height: 1.8;
+}
+
+.five .container .box-one {
+    margin: 0 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.five .container .box-one a {
+    text-decoration: none;
+    color: black;
+}
+
+.five .container .box-one a:hover {
+    border-bottom: 2px solid var(--maincolor);
+
+}
+
+.five .child-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin-bottom: 40px;
+
+}
+
+.five .child-one .box {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+.five .child-one .box img {
+    width: 100%;
+    position: relative;
+}
+
+.five .child-one .box div {
+    position: relative;
+    top: -4px;
+    background-color: var(--maincolor);
+    opacity: 0.8;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+    transition: 0.8s;
+}
+
+
+
+
+
+
+
+.five .child-one .box div h3 {
+    font-size: 14px;
+    padding: 10px;
+    letter-spacing: 5px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.five .child-one .box div p {
+
+    padding: 10px;
+    color: #1B1B1B;
+    letter-spacing: 0.025em;
+    font-size: 0.8rem;
+    line-height: 1.7rem;
+}
+
+.five div {
+    text-align: center;
+}
+
+.five .re {
+
+    text-decoration: none;
+    padding: 15px 30px;
+    color: black;
+    border: 1px solid var(--maincolor);
+    background-color: var(--maincolor);
+}
+
+.five .re:hover {
+    background-color: white;
+}
+
+/* end five */
+/* start six */
+.six {
+    background-image: url("https://ivkovic.me/themes/Sparkle/images/video.jpg");
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+.six::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1B1B1B;
+    opacity: 0.8;
+}
+
+.six .container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.six .container a {
+    position: relative;
+    top: 200px;
+    padding: 25px 55px;
+    text-decoration: none;
+    color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.six .container a:hover {
+    background-color: var(--maincolor);
+    color: black;
+}
+
+/* end six */
+/* start seven */
+.seven {
+    padding-top: var(--padding-top);
+    padding-bottom: 50px;
+
+}
+
+.seven {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.seven .h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    letter-spacing: 15px;
+}
+
+.seven .p {
+    color: rgb(178, 178, 178);
+    margin-bottom: 100px;
+    text-align: center;
+    text-indent: 90px;
+    line-height: 1.8;
+}
+
+.seven .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.seven .container .box {
+    position: relative;
+    width: fit-content;
+    box-shadow: 0px 0px 15px 0px rgb(27 27 27 / 10%);
+}
+
+.seven .container .box img {
+    width: 100%;
+}
+
+.seven .container .box div:first-of-type {
+
+    background-color: #FFE600;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: +270px;
+    height: 60px;
+    padding: 17px 0px;
+    opacity: 0.8;
+}
+
+.seven .container .box div:last-of-type {
+    color: rgb(182, 185, 182);
+    background-color: white;
+    padding: 15px 20px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* end seven */
+/* start eight */
+.eight {
+    padding-bottom: var(--padding-bottom);
+    position: relative;
+}
+
+.eight::before {
+    content: "";
+    position: absolute;
+    top: 29%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(255, 230, 0);
+}
+
+.eight .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.eight .container .one {
+    background-color: #1b1b1b;
+    color: rgb(182, 185, 182);
+    padding: 40px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 3;
+}
+
+.eight .container .box-two {
+    height: 250px;
+    position: relative;
+    z-index: 3;
+}
+
+.eight .container .box-two p {
+    color: rgb(185, 166, 156);
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    z-index: 3;
+    line-height: 1.7;
+}
+
+.eight .container .box-two .r {
+    text-align: start;
+    color: black;
+    margin-top: -50px;
+    font-style: italic;
+    position: relative;
+    z-index: 3;
+}
+
+.eight .container .box-two .d {
+    text-align: end;
+    font-style: italic;
+    color: black;
+    margin-top: -50px;
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width:1300px) {
+    .eight .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .eight::before {
+        width: 0;
+    }
+
+}
+
+/* end eight */
+/* start nine */
+.nine {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-color: rgb(27, 27, 27);
+    color: #BABABA;
+    ;
+}
+
+.nine .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+
+}
+
+
+.nine .container .box .r,
+.nine .container .box .b,
+.nine .container .box .d {
+    margin-top: 15px;
+    line-height: 1.6;
+    padding: 10px 0px;
+    font-size: 12px;
+    word-spacing: 0.5px;
+}
+
+.nine .container .box .b span a {
+    text-decoration: none;
+    color: var(--maincolor);
+    font-size: 15px;
+
+}
+
+
+
+.nine .container .box ul {
+    font-size: 20px;
+}
+
+.nine .container .box ul li {
+    padding: 8px 0px;
+
+}
+
+.nine .container .box ul li:hover {
+    transform: translateX(10px);
+    color: var(--maincolor);
+}
+
+.nine .container .box ul li a {
+    text-decoration: none;
+    color: #BABABA;
+
+    font-size: 12px;
+}
+
+.nine .container .box ul li a:hover {
+    color: var(--maincolor);
+}
+
+.nine .container .box .e {
+    margin-bottom: 15px;
+}
+
+.nine .container .box .a {
+    font-size: 13px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.nine .container .box .f {
+    text-decoration: none;
+    color: #BABABA;
+    padding: 15px 70px;
+    border-radius: 25px;
+    background-color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+    color: black;
+
+}
+
+.nine .container .box .f:hover {
+    background-color: transparent;
+    color: #BABABA;
+}
+
+.nine .container .box .child {
+    margin-top: 50px;
+
+}
+
+.nine .container .box .child a {
+    margin-right: 10px;
+
+}
+
+.nine .container .box .child a img {
+    animation: lad 1s 0s linear infinite alternate forwards;
+
+}
+
+@keyframes lad {
+    0% {
+        transform: translateX(10px) translateY(10px);
+
+    }
+
+    20% {
+        transform: translateX(20px) translateY(-10px);
+
+    }
+
+    40% {
+        transform: translateX(30px) translateY(10px);
+
+    }
+
+    60% {
+        transform: translateX(20px) translateX(20px);
+
+    }
+
+    80% {
+        transform: translateX(10px) translateY(10px);
+
+    }
+
+    100% {
+        transform: translateX(0px) translateY(-10px);
+    }
+}
+
+@media (max-width:1300px) {
+    .nine .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nine .container .box:not(:nth-of-type(4)) {
+        border-bottom: 1px solid var(--maincolor);
+    }
+}
+
+/* end nine */
